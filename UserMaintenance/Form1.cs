@@ -12,6 +12,7 @@ namespace UserMaintenance
 {
     public partial class Form1 : Form
     {
+        BindingList<User> users = new BindingList<User>();
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +21,12 @@ namespace UserMaintenance
             button1.Text = Resource1.Add; // button1
         }
 
+        var u = new User()
+        {
+            LastName = TextBox1.Text,
+            FirstName = TextBox2.Text
+        };
+        users.Add(u); 
         private void Form1_Load(object sender, EventArgs e)
         {
 
